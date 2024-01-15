@@ -123,3 +123,29 @@ form input::placeholder {
 .modal button:hover {
     transform: scale(1.1);
 }
+
+/* Alert Error */
+.alert-error.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.alert-error {
+    position: absolute;
+    background-color: red;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+
+    color: white;
+    padding: .8rem;
+    font-weight: 700;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
