@@ -17,13 +17,13 @@ body {
     font-size: 1.6rem;
 }
 
-.container {
+.container, .modal-wrapper {
     height: 100vh;
     display: grid;
     place-content: center;
 }
 
-form {
+form, .modal {
     background-color: white;
     padding: 4.8rem 6.4rem;
     max-width: 42rem;
@@ -37,18 +37,18 @@ form {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
 }
 
-main h1 {
+.container h1 {
     color: #0C3440;
     font-size: 3.2rem;
     font-weight: 700;
 }
 
-main .input-wrapper {
+.container .input-wrapper {
     color: #00453A;
     font-size: 1.4rem;
 }
 
-main input {
+.container input {
     width: 100%;
     margin-top: 8px;
     padding: 1.6rem;
@@ -65,7 +65,7 @@ form input::placeholder {
     color: rgba(73, 80, 87, 0.50);
 }
 
-main button {
+.container button {
     color: white;
     font-size: 1.6rem;
     font-weight: 700;
@@ -83,9 +83,43 @@ main button {
     transition: 1s;
 }
 
-main button:hover {
+.container button:hover {
     background-color: #00556e;
 }
 
+/* Modal */
+.modal-wrapper {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.70);
+    inset: 0;
+    max-width: 100%;
 
+    opacity: 0;
+    visibility: hidden;
+}
 
+.modal {
+    position: relative;
+}
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal button {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    cursor: pointer;
+
+    transition: transform .3s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
