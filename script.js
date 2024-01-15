@@ -1,3 +1,4 @@
+
 // Variáveis
 const form = document.querySelector('form');
 
