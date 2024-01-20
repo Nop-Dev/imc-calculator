@@ -16,9 +16,11 @@ form.onsubmit = event => {
     const showAlertError = notANumber(peso) || notANumber(altura);
 
     if (showAlertError) {
-        console.log('mostrar o alerta de erro');
+        alertError.open();
         return;
-    }
+    };
+
+    alertError.close();
 
     const result = IMC(peso, altura);
     console.log(result);
