@@ -7,6 +7,10 @@ const form = document.querySelector('form');
 const inputPeso = document.querySelector('#peso');
 const inputAltura = document.querySelector('#altura');
 
+
+inputPeso.oninput = () => alertError.close()
+inputAltura.oninput = () => alertError.close()
+
 form.onsubmit = event => {
     event.preventDefault();
     
@@ -32,4 +36,4 @@ function displayResultMessage(result) {
 
     Modal.message.innerText = message;
     Modal.open();
-}
+};

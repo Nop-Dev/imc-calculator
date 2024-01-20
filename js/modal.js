@@ -10,7 +10,7 @@ export const Modal = {
     close() {
         Modal.wrapper.classList.remove('open');
     }
-}
+};
 
 Modal.btnClose.onclick = () => Modal.close();
 
